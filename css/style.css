@@ -1,0 +1,198 @@
+/* --- IMPORTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+
+/* --- GLOBAL STYLES --- */
+body {
+    background-image: url('../img/bg.png');
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+/* --- TYPE SELECTORS --- */
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+h3 {
+    background-color: #ccc;
+    border: 1px solid #bbbbbb;
+    padding: 2px 4px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* --- CLASS SELECTORS --- */
+.design-name {
+    font-size: 18px;
+    color: #016699;
+    text-decoration: none;
+}
+
+/* --- ID SELECTORS --- */
+#css-zen-garden {
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+/* --- ATTRIBUTE SELECTORS --- */
+aside[role="complementary"] {
+    text-align: left;
+}
+
+/* --- COMBINATOR SELECTORS --- */
+/* descendant combinator */
+nav a:hover {
+    color: #016699;
+    text-decoration: underline;
+}
+
+/* child combinator */
+ul>li {
+    list-style: none;
+}
+
+/* direct Sibling combinator */
+h3+nav {
+    margin-bottom: 2em;
+}
+
+/* general Sibling combinator */
+h3~ul {
+    margin-top: 2em;
+}
+
+/* --- PSEUDO-CLASS SELECTORS --- */
+a:visited {
+    color: #333;
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 600px) {
+    #css-zen-garden {
+        max-width: 97%;
+    }
+
+    .page-wrapper {
+        flex-direction: column;
+    }
+
+    .main,
+    .sidebar {
+        flex: none;
+    }
+
+    .sidebar {
+        margin-left: 0;
+    }
+}
+
+/* --- PAGE LAYOUT AND STRUCTURE --- */
+.page-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main {
+    flex: 1;
+}
+
+.sidebar {
+    flex: 0 0 30%;
+    margin-left: 2%;
+}
+
+/* --- HEADER STYLES --- */
+header h1 {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 3em;
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+header h2 {
+    font-size: 1.5em;
+    color: #333;
+    animation: wiggle 1s infinite;
+}
+
+/* --- TEXT EFFECTS --- */
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(2deg);
+    }
+
+    50% {
+        transform: rotate(-2deg);
+    }
+
+    75% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* --- HYPERLINK STYLES --- */
+a {
+    color: #016699;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- SPECIAL STYLING FOR ABBREVIATIONS --- */
+abbr:first-child {
+    text-decoration: none;
+}
+
+abbr:not(:first-child) {
+    text-decoration: none;
+    background-color: #ccc;
+    border: 1px solid #bbbbbb;
+    padding: 2px 4px;
+    border-radius: 5px;
+}
+
+/* --- BOX MODEL STYLES --- */
+.page-wrapper section header {
+    text-align: center;
+    background-image: linear-gradient(315deg, #a3a8c9 0%, #99728a 74%);
+    border: 1px solid #11000b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    margin: 8px 0px;
+    border-radius: 6px;
+}
+
+.page-wrapper section div,
+.page-wrapper div:nth-child(2) div,
+.page-wrapper div:nth-child(2) footer,
+.page-wrapper aside .wrapper div {
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    margin: 8px 0px;
+    border-radius: 6px;
+}
+
+.page-wrapper div:nth-child(2) footer {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem 4rem;
+}
